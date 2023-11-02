@@ -9,4 +9,21 @@
 ## Contributors
 
 <!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/Skilled5041">
+            <img src="https://avatars.githubusercontent.com/u/93156908?v=4" width="100;" alt="Skilled5041"/>
+            <br />
+            <sub><b>Null</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/danielp1218">
+            <img src="https://avatars.githubusercontent.com/u/107086078?v=4" width="100;" alt="danielp1218"/>
+            <br />
+            <sub><b>Null</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators,contributors -end -->
