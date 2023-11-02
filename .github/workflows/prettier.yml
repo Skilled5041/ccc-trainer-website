@@ -1,21 +1,19 @@
-name: Prettier
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
+name: Format
+on: [pull_request]
 jobs:
-  prettier:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ github.head_ref }}
-          persist-credentials: false
-      - run: npm i prettier-plugin-svelte prettier
-      - run: npx prettier --check ./src
+    format:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "16.x"
+            - run: npm install
+            - run: npm run format
+            - name: Commit changes
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                  commit_message: Apply formatting changes
+                  branch: ${{ github.head_ref }}

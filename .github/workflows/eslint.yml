@@ -1,25 +1,21 @@
 name: ESLint
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: [pull_request]
 
 jobs:
-  eslint:
-    name: Run eslint scanning
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      security-events: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    eslint:
+        name: Run eslint scanning
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            security-events: write
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
 
-      - name: Install ESLint
-        run: npm install eslint
+            - name: Install ESLint
+              run: npm install eslint
 
-      - name: Run ESLint
-        run: npm run lint
-        continue-on-error: true
+            - name: Run ESLint
+              run: npm run lint
+              continue-on-error: true

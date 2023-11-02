@@ -5,7 +5,7 @@ node_modules
 .env
 .env.*
 !.env.example
-.github
+.idea
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
