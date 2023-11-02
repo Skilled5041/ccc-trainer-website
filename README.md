@@ -15,14 +15,14 @@
         <a href="https://github.com/Skilled5041">
             <img src="https://avatars.githubusercontent.com/u/93156908?v=4" width="100;" alt="Skilled5041"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>Skilled5041</b></sub>
         </a>
     </td>
     <td align="center">
         <a href="https://github.com/danielp1218">
             <img src="https://avatars.githubusercontent.com/u/107086078?v=4" width="100;" alt="danielp1218"/>
             <br />
-            <sub><b>Null</b></sub>
+            <sub><b>danielp1218</b></sub>
         </a>
     </td></tr>
 </table>
