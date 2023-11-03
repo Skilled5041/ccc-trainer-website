@@ -2,9 +2,6 @@
 	import "../app.postcss";
 	import { LightSwitch, AppShell, AppBar } from "@skeletonlabs/skeleton";
 	import { fade } from "svelte/transition";
-
-	let scroll: number;
-
 </script>
 
 <AppShell>
@@ -28,39 +25,37 @@
 				</svelte:fragment>
 			</AppBar>
 		</div>
-
 	</svelte:fragment>
 
 	<slot />
-
 </AppShell>
 
 <style>
-    .brackets::before {
-        content: "{";
+	.brackets::before {
+		content: "{";
 		font-size: 1.25em;
 		opacity: 0;
 		transform: none;
-        transition: all 0.2s ease-in-out;
-    }
+		transition: all 0.2s ease-in-out;
+	}
 
 	.brackets:hover::before {
 		opacity: 1;
 		margin-right: 0.5em;
-        transform: translateX(-0.5em);
-    }
+		transform: translateX(-0.5em);
+	}
 
-    .brackets::after {
-        content: "}";
+	.brackets::after {
+		content: "}";
 		font-size: 1.25em;
 		opacity: 0;
 		translate: none;
 		transition: all 0.2s ease-in-out;
-    }
+	}
 
 	.brackets:hover::after {
 		opacity: 1;
 		margin-left: 0.5em;
 		transform: translateX(0.5em);
-    }
+	}
 </style>

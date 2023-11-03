@@ -15,7 +15,7 @@
 	const particlesConfig: ISourceOptions = {
 		particles: {
 			color: {
-				value: "rgba(207, 227, 239, 1)",
+				value: "rgba(207, 227, 239, 1)"
 			},
 			links: {
 				enable: true,
@@ -33,12 +33,12 @@
 				onHover: {
 					enable: true,
 					mode: ["grab", "attract", "trail"]
-				},
+				}
 			}
 		}
 	};
 
-	let particlesInit = async (engine: Engine) => {
+	const particlesInit = async (engine: Engine) => {
 		await loadFull(engine);
 	};
 
