@@ -42,11 +42,11 @@
 		await loadFull(engine);
 	};
 
-	const title = "Insert Title Here";
+	const title = "CCC Trainer";
 </script>
 
 <div class="flex items-center justify-center flex-col">
-	<div class="w-fit mt-96 relative" style="--typing-steps: {title.length}">
+	<div class="w-fit mt-72 relative" style="--typing-steps: {title.length}">
 		<h1
 			class="text-8xl border-r-4 font-bold typing-animation whitespace-nowrap overflow-hidden font-mono"
 		>

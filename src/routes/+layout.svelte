@@ -13,10 +13,10 @@
 				</svelte:fragment>
 				<svelte:fragment slot="trail">
 					<div class="flex">
-						<div class="flex">
+						<div class="pr-0.5">
 							<a href="/" class="brackets">Test2</a>
 						</div>
-						<div class="flex">
+						<div class="pr-0.5">
 							<a href="/" class="brackets">Test1</a>
 						</div>
 					</div>

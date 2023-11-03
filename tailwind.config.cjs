@@ -19,7 +19,7 @@ module.exports = {
 				"100%": "100%"
 			},
 			fontFamily: {
-				mono: ["JetBrains Mono"]
+				mono: ["JetBrainsMono"]
 			}
 		}
 	},
