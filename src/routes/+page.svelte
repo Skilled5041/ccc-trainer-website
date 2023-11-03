@@ -15,7 +15,7 @@
 	const particlesConfig: ISourceOptions = {
 		particles: {
 			color: {
-				value: "rgba(207, 227, 239, 1)"
+				value: "rgba(207, 227, 239, 1)",
 			},
 			links: {
 				enable: true,
@@ -25,15 +25,15 @@
 				enable: true
 			},
 			number: {
-				value: 200
+				value: 0
 			}
 		},
 		interactivity: {
 			events: {
 				onHover: {
 					enable: true,
-					mode: ["grab", "attract"]
-				}
+					mode: ["grab", "attract", "trail"]
+				},
 			}
 		}
 	};
@@ -46,7 +46,7 @@
 </script>
 
 <div class="flex items-center justify-center flex-col">
-	<div class="w-fit mt-96" style="--typing-steps: {title.length}">
+	<div class="w-fit mt-96 relative" style="--typing-steps: {title.length}">
 		<h1
 			class="text-8xl border-r-4 font-bold typing-animation whitespace-nowrap overflow-hidden font-mono"
 		>
