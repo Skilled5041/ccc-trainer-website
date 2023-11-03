@@ -1,4 +1,46 @@
 <script lang="ts">
+	import type { SvelteComponent } from "svelte";
+	import { onMount } from "svelte";
+	import { loadFull } from "tsparticles";
+	import type { ISourceOptions } from "tsparticles-engine";
+
+	let ParticlesComponent: typeof SvelteComponent;
+
+	onMount(async () => {
+		const module = await import("svelte-particles");
+		ParticlesComponent = module.default as typeof SvelteComponent;
+	});
+
+	let particlesConfig: ISourceOptions = {
+		particles: {
+			color: {
+				value: "rgba(207, 227, 239, 1)"
+			},
+			links: {
+				enable: true,
+				color: "rgba(207, 227, 239, 1)"
+			},
+			move: {
+				enable: true
+			},
+			number: {
+				value: 200
+			}
+		},
+		interactivity: {
+			events: {
+				onHover: {
+					enable: true,
+					mode: ["grab", "attract"]
+				}
+			}
+		}
+	};
+
+	let particlesInit = async (engine: any) => {
+		await loadFull(engine);
+	};
+
 	const title = "Insert Title Here";
 </script>
 
@@ -9,6 +51,12 @@
 		>
 			{title}
 		</h1>
+		<svelte:component
+			this={ParticlesComponent}
+			id="tsparticles"
+			options={particlesConfig}
+			{particlesInit}
+		/>
 	</div>
 	<div class="w-full -mt-64">
 		<svg
@@ -36,36 +84,38 @@
 			/>
 		</svg>
 		<div class="bg-primary-800 h-64 flex items-center justify-center">
-			<h1 class="text-3xl m-96">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores assumenda autem delectus enim
-				facilis fugiat molestiae, numquam, pariatur perferendis porro quam sapiente tempora tenetur ullam vel
-				velit veniam voluptatem.</h1>
+			<h1 class="text-3xl m-96 text-white">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores assumenda
+				autem delectus enim facilis fugiat molestiae, numquam, pariatur perferendis porro
+				quam sapiente tempora tenetur ullam vel velit veniam voluptatem.
+			</h1>
 		</div>
 	</div>
 </div>
 
 <style>
-    @keyframes typing {
-        from {
-            width: 0;
-            visibility: hidden;
-            border-color: transparent;
-        }
-        to {
-            width: 100%;
-        }
-    }
+	@keyframes typing {
+		from {
+			width: 0;
+			visibility: hidden;
+			border-color: transparent;
+		}
+		to {
+			width: 100%;
+		}
+	}
 
-    @keyframes blink-text-cursor {
-        from,
-        to {
-            border-right-color: transparent;
-        }
-        50% {
-            border-right-color: white;
-        }
-    }
+	@keyframes blink-text-cursor {
+		from,
+		to {
+			border-right-color: transparent;
+		}
+		50% {
+			border-right-color: white;
+		}
+	}
 
-    .typing-animation {
-        animation: typing 3s steps(var(--typing-steps)), blink-text-cursor 0.727s step-end infinite;
-    }
+	.typing-animation {
+		animation: typing 3s steps(var(--typing-steps)), blink-text-cursor 0.727s step-end infinite;
+	}
 </style>
