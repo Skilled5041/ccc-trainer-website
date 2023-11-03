@@ -3,6 +3,7 @@
 	import { onMount } from "svelte";
 	import { loadFull } from "tsparticles";
 	import type { ISourceOptions } from "tsparticles-engine";
+	import type { Engine } from "tsparticles-engine";
 
 	let ParticlesComponent: typeof SvelteComponent;
 
@@ -11,7 +12,7 @@
 		ParticlesComponent = module.default as typeof SvelteComponent;
 	});
 
-	let particlesConfig: ISourceOptions = {
+	const particlesConfig: ISourceOptions = {
 		particles: {
 			color: {
 				value: "rgba(207, 227, 239, 1)"
@@ -37,7 +38,7 @@
 		}
 	};
 
-	let particlesInit = async (engine: any) => {
+	let particlesInit = async (engine: Engine) => {
 		await loadFull(engine);
 	};
 
