@@ -24,7 +24,9 @@
 						transition:fade={{ delay: delay, duration: duration }}
 						class="rounded-100% border-2 p-2 mr-3 border-surface-600-300-token"
 					>
-						<BracketIcon width="25px" height="25px" delayAmount={duration} />
+						<a href="/">
+							<BracketIcon width="25px" height="25px" delayAmount={duration} />
+						</a>
 					</div>
 					<a
 						transition:fade={{ delay: delay, duration: duration }}
@@ -46,7 +48,6 @@
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-
 	<slot />
 </AppShell>
 
