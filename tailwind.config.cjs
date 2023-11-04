@@ -20,6 +20,29 @@ module.exports = {
 			},
 			fontFamily: {
 				mono: ["JetBrainsMono"]
+			},
+			animation: {
+				"text-typing": "typing 3s steps(var(--typing-steps)), blink 727ms step-end infinite"
+			},
+			keyframes: {
+				blink: {
+					"0%, 100%": {
+						borderRightColor: "transparent"
+					},
+					"50%": {
+						borderRightColor: "currentColor"
+					}
+				},
+				typing: {
+					"0%": {
+						width: "0",
+						visibility: "hidden"
+					},
+					"100%": {
+						width: "100%",
+						visibility: "visible"
+					}
+				}
 			}
 		}
 	},

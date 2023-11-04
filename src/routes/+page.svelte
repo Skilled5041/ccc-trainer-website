@@ -65,8 +65,8 @@
 			},
 			modes: {
 				trail: {
-					delay: 0.1,
-					quantity: 3,
+					delay: 0.0333,
+					quantity: 1,
 					pauseOnStop: true
 				},
 				grab: {
@@ -101,36 +101,9 @@
 <div class="flex items-center justify-center flex-col">
 	<div class="w-fit mt-72 relative" style="--typing-steps: {title.length}">
 		<h1
-			class="text-8xl border-r-4 font-bold typing-animation whitespace-nowrap overflow-hidden font-mono"
+			class="text-8xl border-r-4 border-surface-900-50-token font-bold animate-text-typing whitespace-nowrap overflow-hidden font-mono"
 		>
 			{title}
 		</h1>
 	</div>
 </div>
-
-<style>
-	@keyframes typing {
-		from {
-			width: 0;
-			visibility: hidden;
-			border-color: transparent;
-		}
-		to {
-			width: 100%;
-		}
-	}
-
-	@keyframes blink-text-cursor {
-		from,
-		to {
-			border-right-color: transparent;
-		}
-		50% {
-			border-right-color: white;
-		}
-	}
-
-	.typing-animation {
-		animation: typing 3s steps(var(--typing-steps)), blink-text-cursor 0.727s step-end infinite;
-	}
-</style>
