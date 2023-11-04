@@ -58,11 +58,13 @@
         opacity: 0;
         transform: none;
         transition: all 0.2s ease-in-out;
+		position: relative;
+		right: 10px;
     }
 
     .brackets:hover::before {
         opacity: 1;
-        margin-right: 0.5em;
+        /* margin-right: 0.5em; */
         transform: translateX(-0.5em);
     }
 
@@ -72,11 +74,13 @@
         opacity: 0;
         translate: none;
         transition: all 0.2s ease-in-out;
+		position: relative;
+		left: 10px;
     }
 
     .brackets:hover::after {
         opacity: 1;
-        margin-left: 0.5em;
+        /* margin-left: 0.5em; */
         transform: translateX(0.5em);
     }
 </style>
