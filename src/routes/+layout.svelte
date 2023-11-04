@@ -31,17 +31,12 @@
 				{/if}
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				{#if showNav}
-					<div transition:fade={{ delay: 4000, duration: 1000 }} class="flex">
-						<div class="pr-0.5">
-							<a href="/" class="brackets">Test2</a>
-						</div>
-						<div class="pr-0.5">
-							<a href="/" class="brackets">Test1</a>
-						</div>
-					</div>
-				{/if}
-
+				<div class="pr-0.5">
+					<a href="/" class="brackets">Test2</a>
+				</div>
+				<div class="pr-0.5">
+					<a href="/" class="brackets">Test1</a>
+				</div>
 				<LightSwitch />
 			</svelte:fragment>
 		</AppBar>
