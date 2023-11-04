@@ -16,11 +16,11 @@
 		fullScreen: false,
 		particles: {
 			color: {
-				value: "rgba(207, 227, 239, 1)"
+				value: "rgba(167, 167, 167, 0.8)"
 			},
 			links: {
 				enable: true,
-				color: "rgba(207, 227, 239, 1)",
+				color: "rgba(167, 167, 167, 0.8)",
 				opacity: 1,
 				distance: 150
 			},
@@ -91,7 +91,12 @@
 </script>
 
 <div class="absolute w-full h-full">
-	<svelte:component class="w-full h-full" this={ParticlesComponent} options={particlesConfig} {particlesInit} />
+	<svelte:component
+		this={ParticlesComponent}
+		class="w-full h-full"
+		options={particlesConfig}
+		{particlesInit}
+	/>
 </div>
 <div class="flex items-center justify-center flex-col">
 	<div class="w-fit mt-72 relative" style="--typing-steps: {title.length}">
