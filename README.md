@@ -29,6 +29,13 @@
             <br />
             <sub><b>danielp1218</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Achal-00">
+            <img src="https://avatars.githubusercontent.com/u/106076516?v=4" width="100;" alt="Achal-00"/>
+            <br />
+            <sub><b>Achal-00</b></sub>
+        </a>
     </td></tr>
 </table>
 <!-- readme: collaborators,contributors -end -->
