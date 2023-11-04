@@ -16,69 +16,84 @@
 		fullScreen: false,
 		particles: {
 			color: {
-				value: "rgba(167, 167, 167, 0.8)"
+				value: "rgba(156, 191, 211, 0.8)",
+				animation: {
+					enable: true,
+					speed: 30,
+					sync: false,
+					s: {
+						enable: true,
+						speed: 30
+					}
+				}
 			},
 			links: {
 				enable: true,
-				color: "rgba(167, 167, 167, 0.8)",
+				color: "rgba(156, 191, 211, 0.8)",
 				opacity: 1,
-				distance: 150
+				distance: 150,
+				animation: {
+					enable: true,
+					speed: 30,
+					sync: false
+				}
 			},
 			move: {
-				enable: true
+				enable: true,
+				angle: 360,
+				random: true,
+				speed: {
+					min: 0.2,
+					max: 1
+				}
 			},
 			number: {
-				limit: 40
+				value: 50,
+				limit: 50
 			},
 			opacity: {
-				value: 1
+				value: 1,
+				random: {
+					enable: true,
+					minimumValue: 0.5
+				},
+				animation: {
+					enable: true,
+					speed: 1,
+					opacity_min: 0.5,
+					sync: false
+				}
 			},
 			size: {
 				value: 4,
 				animation: {
 					enable: true,
 					speed: 20,
-					minimumValue: 1
+					minimumValue: 1,
+					sync: false
 				}
 			}
 		},
-		life: {
-			duration: {
-				sync: false,
-				value: 3
-			},
-			count: 0,
-			delay: {
-				random: {
-					enable: true,
-					minimumValue: 0.5
-				},
-				value: 1
-			}
-		},
+		smooth: false,
 		interactivity: {
 			events: {
 				onHover: {
 					enable: true,
-					mode: ["grab", "attract", "trail", "bubble"]
+					mode: ["grab", "light"],
+					parallax: {
+						enable: true,
+						force: 10,
+						smooth: 100
+					}
 				}
 			},
 			modes: {
-				trail: {
-					delay: 0.0333,
-					quantity: 1,
-					pauseOnStop: true
-				},
 				grab: {
 					distance: 250,
 					links: {
 						opacity: 1
-					}
+					},
 				},
-				bubble: {
-					opacity: 1,
-					distance: 250
-				}
 			}
 		}
 	};
