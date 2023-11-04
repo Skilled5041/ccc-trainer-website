@@ -92,8 +92,8 @@
 					distance: 250,
 					links: {
 						opacity: 1
-					},
-				},
+					}
+				}
 			}
 		}
 	};

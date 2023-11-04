@@ -74,7 +74,8 @@
         position: absolute;
     }
 
-    .brackets:hover::before, .brackets:hover::after {
+    .brackets:hover::before,
+    .brackets:hover::after {
         opacity: 1;
         margin-left: 2em;
         margin-right: 2em;
