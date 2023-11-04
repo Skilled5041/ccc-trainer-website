@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { draw } from "svelte/transition";
 	import { onMount } from "svelte";
-	import { quintOut, quintIn } from "svelte/easing";
+	import { cubicIn, cubicOut } from "svelte/easing";
 
 	let ready: boolean = false;
 	onMount(() => (ready = true));
@@ -21,11 +21,11 @@
 >
 	{#if ready}
 		<path
-			transition:draw={{ delay: delayAmount, duration: 1000, easing: quintIn }}
+			transition:draw={{ delay: delayAmount, duration: 2000, easing: cubicIn }}
 			d="M9,3H8A3,3,0,0,0,5,6V9a3,3,0,0,1-3,3H2a3,3,0,0,1,3,3v4a3,3,0,0,0,3,3H9"
 		/>
 		<path
-			transition:draw={{ delay: delayAmount, duration: 1000, easing: quintOut }}
+			transition:draw={{ delay: delayAmount, duration: 2000, easing: cubicOut }}
 			d="M15,3h1a3,3,0,0,1,3,3V9a3,3,0,0,0,3,3h0a3,3,0,0,0-3,3v4a3,3,0,0,1-3,3H15"
 		/>
 	{/if}

@@ -16,7 +16,7 @@
 		fullScreen: true,
 		particles: {
 			color: {
-				value: "rgba(207, 227, 239, 1)",
+				value: "rgba(207, 227, 239, 1)"
 			},
 			links: {
 				enable: true,
@@ -38,7 +38,7 @@
 				animation: {
 					enable: true,
 					speed: 20,
-					minimumValue: 1,
+					minimumValue: 1
 				}
 			}
 		},
