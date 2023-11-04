@@ -17,7 +17,7 @@
 
 <AppShell>
 	<svelte:fragment slot="header">
-		<AppBar shadow="shadow-2xl">
+		<AppBar>
 			<svelte:fragment slot="lead">
 				{#if showNav}
 					<div
@@ -38,13 +38,15 @@
 				{/if}
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<div class="pr-0.5">
-					<a href="/" class="brackets">Test2</a>
+				<div class="flex gap-12 mr-2">
+					<div class="pr-0.5">
+						<a href="/" class="brackets relative">Test1</a>
+					</div>
+					<div class="pr-0.5">
+						<a href="/" class="brackets relative">Test2</a>
+					</div>
+					<LightSwitch />
 				</div>
-				<div class="pr-0.5">
-					<a href="/" class="brackets">Test1</a>
-				</div>
-				<LightSwitch />
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
@@ -52,35 +54,29 @@
 </AppShell>
 
 <style>
-	.brackets::before {
-		content: "{";
-		font-size: 1.25em;
-		opacity: 0;
-		transform: none;
-		transition: all 0.2s ease-in-out;
-		position: relative;
-		right: 10px;
-	}
+    .brackets::before {
+        content: "{";
+        font-size: 1.25em;
+        opacity: 0;
+        margin-right: 1.5em;
+        transition: all 0.2s ease-in-out;
+        right: 10px;
+        position: absolute;
+    }
 
-	.brackets:hover::before {
-		opacity: 1;
-		/* margin-right: 0.5em; */
-		transform: translateX(-0.5em);
-	}
+    .brackets::after {
+        content: "}";
+        font-size: 1.25em;
+        opacity: 0;
+        margin-left: 1.5em;
+        transition: all 0.2s ease-in-out;
+        left: 10px;
+        position: absolute;
+    }
 
-	.brackets::after {
-		content: "}";
-		font-size: 1.25em;
-		opacity: 0;
-		translate: none;
-		transition: all 0.2s ease-in-out;
-		position: relative;
-		left: 10px;
-	}
-
-	.brackets:hover::after {
-		opacity: 1;
-		/* margin-left: 0.5em; */
-		transform: translateX(0.5em);
-	}
+    .brackets:hover::before, .brackets:hover::after {
+        opacity: 1;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
 </style>
