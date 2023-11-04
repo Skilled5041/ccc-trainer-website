@@ -52,31 +52,31 @@
 </AppShell>
 
 <style>
-	.brackets::before {
-		content: "{";
-		font-size: 1.25em;
-		opacity: 0;
-		margin-right: 0.5em;
-		transform: translateX(-0.5em);
-		transform: none;
-		transition: all 0.2s ease-in-out;
-	}
+    .brackets::before {
+        content: "{";
+        font-size: 1.25em;
+        opacity: 0;
+        transform: none;
+        transition: all 0.2s ease-in-out;
+    }
 
-	.brackets:hover::before {
-		opacity: 1;
-	}
+    .brackets:hover::before {
+        opacity: 1;
+        margin-right: 0.5em;
+        transform: translateX(-0.5em);
+    }
 
-	.brackets::after {
-		content: "}";
-		font-size: 1.25em;
-		opacity: 0;
-		margin-left: 0.5em;
-		transform: translateX(0.5em);
-		translate: none;
-		transition: all 0.2s ease-in-out;
-	}
+    .brackets::after {
+        content: "}";
+        font-size: 1.25em;
+        opacity: 0;
+        translate: none;
+        transition: all 0.2s ease-in-out;
+    }
 
-	.brackets:hover::after {
-		opacity: 1;
-	}
+    .brackets:hover::after {
+        opacity: 1;
+        margin-left: 0.5em;
+        transform: translateX(0.5em);
+    }
 </style>
