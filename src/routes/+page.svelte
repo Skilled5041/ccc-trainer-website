@@ -13,7 +13,7 @@
 	});
 
 	const particlesConfig: ISourceOptions = {
-		fullScreen: true,
+		fullScreen: false,
 		particles: {
 			color: {
 				value: "rgba(207, 227, 239, 1)"
@@ -97,9 +97,9 @@
 		>
 			{title}
 		</h1>
-		<div class="relative w-full h-full z-10">
-			<svelte:component this={ParticlesComponent} options={particlesConfig} {particlesInit} />
-		</div>
+	</div>
+	<div class="absolute w-full h-full -z-10">
+		<svelte:component class="w-full h-full" this={ParticlesComponent} options={particlesConfig} {particlesInit} />
 	</div>
 </div>
 
