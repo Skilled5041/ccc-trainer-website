@@ -17,19 +17,22 @@
 			<svelte:fragment slot="lead">
 				{#if showNav}
 					<div
-						transition:fade={{ delay:2500, duration: 1000 }}
+						transition:fade={{ delay: 2500, duration: 1000 }}
 						class="rounded-100% border-2 p-2 mr-3 border-surface-600-300-token"
 					>
 						<BracketIcon width="25px" height="25px" delayAmount={5000} />
 					</div>
-					<h1 transition:fade={{ delay:3300, duration: 1000 }} class="text-2xl font-bold">
+					<h1
+						transition:fade={{ delay: 3300, duration: 1000 }}
+						class="text-2xl font-bold"
+					>
 						CCC Trainer
 					</h1>
 				{/if}
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				{#if showNav}
-					<div transition:fade={{ delay:4000, duration: 1000 }} class="flex">
+					<div transition:fade={{ delay: 4000, duration: 1000 }} class="flex">
 						<div class="pr-0.5">
 							<a href="/" class="brackets">Test2</a>
 						</div>

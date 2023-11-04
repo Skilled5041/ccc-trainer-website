@@ -8,7 +8,7 @@
 	export let width: string = "64px";
 	export let height: string = "64px";
 	export let vb: string = "0 0 24 24";
-    export let delayAmount: number = 0;
+	export let delayAmount: number = 0;
 </script>
 
 <svg
