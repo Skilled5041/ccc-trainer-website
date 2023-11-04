@@ -19,12 +19,14 @@
 					<div
 						transition:fade={{ delay: 2500, duration: 1000 }}
 						class="rounded-100% border-2 p-2 mr-3 border-surface-600-300-token"
+						href="/"
 					>
 						<BracketIcon width="25px" height="25px" delayAmount={5000} />
 					</div>
 					<h1
 						transition:fade={{ delay: 3300, duration: 1000 }}
 						class="text-2xl font-bold"
+						href=""
 					>
 						CCC Trainer
 					</h1>
