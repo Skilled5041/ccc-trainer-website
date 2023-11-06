@@ -78,6 +78,7 @@
         opacity: 1;
 		padding-right: 100%;
 	}
+
 	.brackets:hover::after {
 		opacity: 1;
 		padding-left: 100%;
