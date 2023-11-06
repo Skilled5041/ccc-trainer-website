@@ -113,12 +113,13 @@
 		{particlesInit}
 	/>
 </div>
-<div class="flex items-center justify-center flex-col">
-	<div class="w-fit mt-72 relative" style="--typing-steps: {title.length}">
-		<h1
-			class="text-8xl border-r-4 border-surface-900-50-token font-bold animate-text-typing whitespace-nowrap overflow-hidden font-mono"
-		>
-			{title}
-		</h1>
-	</div>
+<div
+	class="fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+	style="--typing-steps: {title.length}"
+>
+	<h1
+		class="text-8xl border-r-4 border-surface-900-50-token font-bold animate-text-typing whitespace-nowrap overflow-hidden font-mono"
+	>
+		{title}
+	</h1>
 </div>
