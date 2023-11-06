@@ -11,6 +11,7 @@
 		showNav = true;
 	});
 
+	//TODO: get rid of this
 	const delay = $page.url.pathname === "/" ? 500 : 0;
 	const duration = $page.url.pathname === "/" ? 1000 : 0;
 </script>
@@ -40,10 +41,10 @@
 			<svelte:fragment slot="trail">
 				<div class="flex gap-12 mr-2">
 					<div class="pr-0.5">
-						<a href="/" class="brackets relative">Test1</a>
+						<a href="/" class="brackets relative">Test</a>
 					</div>
 					<div class="pr-0.5">
-						<a href="/" class="brackets relative">Test2</a>
+						<a href="/about" class="brackets relative">About</a>
 					</div>
 					<LightSwitch />
 				</div>
