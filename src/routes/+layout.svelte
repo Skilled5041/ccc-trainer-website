@@ -58,7 +58,7 @@
 		content: "{";
 		font-size: 1.25em;
 		opacity: 0;
-		margin-right: 1.5em;
+		padding-right: 50%;
 		transition: all 0.2s ease-in-out;
 		right: 10px;
 		position: absolute;
@@ -68,16 +68,18 @@
 		content: "}";
 		font-size: 1.25em;
 		opacity: 0;
-		margin-left: 1.5em;
+		padding-left: 50%;
 		transition: all 0.2s ease-in-out;
 		left: 10px;
 		position: absolute;
 	}
 
-	.brackets:hover::before,
+	.brackets:hover::before{
+        opacity: 1;
+		padding-right: 100%;
+	}
 	.brackets:hover::after {
 		opacity: 1;
-		margin-left: 2em;
-		margin-right: 2em;
+		padding-left: 100%;
 	}
 </style>
