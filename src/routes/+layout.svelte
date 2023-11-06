@@ -54,30 +54,30 @@
 </AppShell>
 
 <style>
-    .brackets::before {
-        content: "{";
-        font-size: 1.25em;
-        opacity: 0;
-        margin-right: 1.5em;
-        transition: all 0.2s ease-in-out;
-        right: 10px;
-        position: absolute;
-    }
+	.brackets::before {
+		content: "{";
+		font-size: 1.25em;
+		opacity: 0;
+		margin-right: 1.5em;
+		transition: all 0.2s ease-in-out;
+		right: 10px;
+		position: absolute;
+	}
 
-    .brackets::after {
-        content: "}";
-        font-size: 1.25em;
-        opacity: 0;
-        margin-left: 1.5em;
-        transition: all 0.2s ease-in-out;
-        left: 10px;
-        position: absolute;
-    }
+	.brackets::after {
+		content: "}";
+		font-size: 1.25em;
+		opacity: 0;
+		margin-left: 1.5em;
+		transition: all 0.2s ease-in-out;
+		left: 10px;
+		position: absolute;
+	}
 
-    .brackets:hover::before,
-    .brackets:hover::after {
-        opacity: 1;
-        margin-left: 2em;
-        margin-right: 2em;
-    }
+	.brackets:hover::before,
+	.brackets:hover::after {
+		opacity: 1;
+		margin-left: 2em;
+		margin-right: 2em;
+	}
 </style>

@@ -113,7 +113,10 @@
 		{particlesInit}
 	/>
 </div>
-<div class="fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]" style="--typing-steps: {title.length}">
+<div
+	class="fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+	style="--typing-steps: {title.length}"
+>
 	<h1
 		class="text-8xl border-r-4 border-surface-900-50-token font-bold animate-text-typing whitespace-nowrap overflow-hidden font-mono"
 	>
