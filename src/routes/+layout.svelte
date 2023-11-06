@@ -11,7 +11,6 @@
 		showNav = true;
 	});
 
-	//TODO: get rid of this
 	const delay = $page.url.pathname === "/" ? 500 : 0;
 	const duration = $page.url.pathname === "/" ? 1000 : 0;
 </script>
