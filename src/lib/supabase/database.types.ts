@@ -47,7 +47,23 @@ export interface Database {
 			[_ in never]: never;
 		};
 		Functions: {
-			[_ in never]: never;
+			problems_in: {
+				Args: {
+					vals: string[];
+				};
+				Returns: {
+					code: string;
+					created_at: string;
+					group: string;
+					id: number;
+					is_organization_private: boolean;
+					is_public: boolean;
+					name: string;
+					partial: boolean;
+					points: number;
+					types: string[];
+				}[];
+			};
 		};
 		Enums: {
 			[_ in never]: never;
