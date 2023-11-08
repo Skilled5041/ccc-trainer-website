@@ -25,6 +25,6 @@ jobs:
                   SECRET_SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SECRET_SUPABASE_SERVICE_ROLE_KEY }}
                   SECRET_SUPABASE_URL: ${{ secrets.SECRET_SUPABASE_URL }}
                   SECRET_DMOJ_API_TOKEN: ${{ secrets.SECRET_DMOJ_API_TOKEN }}
-            - run: npm install --force
+            - run: npm install
             - run: npx playwright install
             - run: npm test

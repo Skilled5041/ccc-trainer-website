@@ -13,7 +13,7 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v3
 
-            - name: Install ESLint --force
+            - name: Install ESLint
               run: npm install eslint
 
             - name: Run ESLint
