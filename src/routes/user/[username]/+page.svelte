@@ -1,21 +1,8 @@
 <script lang="ts">
-	import {
-		Chart as ChartJS,
-		Legend,
-		LineElement,
-		PointElement,
-		RadialLinearScale,
-		Title,
-		Tooltip,
-		Colors
-	} from "chart.js";
-	import type { ChartData, ChartOptions } from "chart.js";
-	import { Radar } from "svelte-chartjs";
 	import type { PageServerData } from "./$types";
 
 	export let data: PageServerData;
 
-	ChartJS.register(Title, Tooltip, Legend, PointElement, RadialLinearScale, LineElement, Colors);
 
 	const problemTypes: Record<string, number> = {
 		"Ad Hoc": 0,
@@ -46,35 +33,10 @@
 			problemTypes[type]++;
 		});
 	});
-
-	const chartData: ChartData<"radar", number[]> = {
-		labels: Object.keys(problemTypes).filter((type) => problemTypes[type] > 0),
-		datasets: [
-			{
-				label: "Problems",
-				data: Object.values(problemTypes).filter((value) => value > 0),
-				fill: true
-			}
-		]
-	};
-
-	const chartOptions: ChartOptions<"radar"> = {
-		responsive: true,
-		elements: {
-			line: {
-				borderWidth: 3
-			}
-		},
-		plugins: {
-			colors: {
-				enabled: true
-			}
-		}
-	};
 </script>
 
 <div>
 	<div class="m-32 bg-surface-100 flex content-center items-center">
-		<Radar data={chartData} options={chartOptions} title="Problems Solved By Type" />
+
 	</div>
 </div>
